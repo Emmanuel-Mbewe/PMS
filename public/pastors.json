@@ -1,0 +1,65 @@
+[
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "otherNames": "Rev. Dr.",
+      "status": "Serving",
+      "profilePic": "/images/pastor.png",
+      "age": 45,
+      "biography": "Pastor John Doe has been serving in the ministry for over 20 years. He is passionate about spreading the gospel and has a deep commitment to the community. He is currently serving as the Senior Pastor at City Church. His academic qualifications include a Doctorate in Theology and a Master's degree in Divinity.",
+      "location": "City Church",
+      "title": "Senior Pastor",
+      "academicQualifications": [
+        "Doctorate in Theology",
+        "Master's in Divinity"
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "otherNames": "Rev.",
+      "status": "Retired",
+      "profilePic": "/images/pastor.png",
+      "age": 60,
+      "biography": "Pastor Jane Smith is known for her deep spiritual insights and her commitment to mentoring young leaders in the church. She has been part of the pastoral team at Grace Community Church for over 10 years. She holds a Bachelor's degree in Theology and is currently pursuing a Master's degree in Christian Counseling.",
+      "location": "Grace Community Church",
+      "title": "Associate Pastor",
+      "academicQualifications": [
+        "Bachelor's in Theology",
+        "Pursuing Master's in Christian Counseling"
+      ]
+    },
+    {
+      "id": 3,
+      "firstName": "Samuel",
+      "lastName": "Johnson",
+      "otherNames": "Rev.",
+      "status": "Pending",
+      "profilePic": "/images/pastor.png",
+      "age": 30,
+      "biography": "Pastor Samuel Johnson is preparing for ordination and is awaiting assignment to a church. He holds a Master's degree in Divinity and is passionate about youth ministry.",
+      "location": "Pending Assignment",
+      "title": "Pastor in Training",
+      "academicQualifications": [
+        "Master's in Divinity"
+      ]
+    },
+    {
+      "id": 4,
+      "firstName": "Emmanuel",
+      "lastName": "John Mbewe",
+      "otherNames": "Rev.",
+      "status": "Pending",
+      "profilePic": "/images/pastor.png",
+      "age": 35,
+      "biography": "Pastor Emmanuel John is awaiting his first placement in the ministry. He has completed his theological training and is looking forward to serving a local congregation.",
+      "location": "Pending Assignment",
+      "title": "Pastor in Training",
+      "academicQualifications": [
+        "Bachelor's in Theology"
+      ]
+    }
+  ]
+  
