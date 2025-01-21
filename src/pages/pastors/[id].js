@@ -4,27 +4,37 @@ import { useEffect, useState } from 'react';
 export default function PastorDetail() {
   const router = useRouter();
   const { id } = router.query; // Get the pastor's ID from the URL
+
   const [pastor, setPastor] = useState(null);
-  const [isReadMore, setIsReadMore] = useState(false); // Declare outside any conditional logic
+  const [pastors, setPastors] = useState([]);
+  const [isReadMore, setIsReadMore] = useState(false);
 
   useEffect(() => {
-    if (!id) return; // Safeguard to prevent unnecessary execution when `id` is undefined
-
-    // Fetch the pastor data by id (this can be an API call or from the JSON file)
+    // Fetch all pastors data
     fetch('/pastors.json')
       .then((response) => response.json())
       .then((data) => {
-        const pastorData = data.find((pastor) => pastor.id === parseInt(id, 10));
-        setPastor(pastorData);
+        setPastors(data);
+
+        // Find the current pastor by ID
+        if (id) {
+          const currentPastor = data.find((pastor) => pastor.id === parseInt(id, 10));
+          setPastor(currentPastor);
+        }
       })
       .catch((error) => console.error('Error fetching pastor data:', error));
   }, [id]);
 
+  // Determine the previous and next pastors
+  const currentIndex = pastors.findIndex((p) => p.id === parseInt(id, 10));
+  const previousPastor = currentIndex > 0 ? pastors[currentIndex - 1] : null;
+  const nextPastor = currentIndex < pastors.length - 1 ? pastors[currentIndex + 1] : null;
+
+  const toggleReadMore = () => setIsReadMore(!isReadMore);
+
   if (!pastor) {
     return <div>Loading...</div>;
   }
-
-  const toggleReadMore = () => setIsReadMore(!isReadMore);
 
   return (
     <div className="bg-gray-100 min-h-screen p-6">
@@ -42,7 +52,9 @@ export default function PastorDetail() {
             className="w-32 h-32 rounded-full border-2 border-gray-300"
           />
           <div className="ml-6">
-            <h2 className="text-3xl font-semibold text-gray-800">{pastor.firstName} {pastor.lastName}</h2>
+            <h2 className="text-3xl font-semibold text-gray-800">
+              {pastor.firstName} {pastor.lastName}
+            </h2>
             <p className="text-gray-500">Title: {pastor.title}</p>
             <p className="text-gray-500">Status: {pastor.status}</p>
             <p className="text-gray-500">Age: {pastor.age}</p>
@@ -63,6 +75,26 @@ export default function PastorDetail() {
               {isReadMore ? 'Read Less' : 'Read More'}
             </button>
           </p>
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="mt-8 flex justify-between">
+          {previousPastor && (
+            <button
+              onClick={() => router.push(`/pastors/${previousPastor.id}`)}
+              className="bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition-all"
+            >
+              ← Previous: {previousPastor.firstName} {previousPastor.lastName}
+            </button>
+          )}
+          {nextPastor && (
+            <button
+              onClick={() => router.push(`/pastors/${nextPastor.id}`)}
+              className="bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition-all"
+            >
+              Next: {nextPastor.firstName} {nextPastor.lastName} →
+            </button>
+          )}
         </div>
       </div>
     </div>
