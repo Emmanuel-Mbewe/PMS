@@ -5,30 +5,25 @@ export default function PastorDetail() {
   const router = useRouter();
   const { id } = router.query; // Get the pastor's ID from the URL
   const [pastor, setPastor] = useState(null);
+  const [isReadMore, setIsReadMore] = useState(false); // Declare outside any conditional logic
 
   useEffect(() => {
-    if (id) {
-      // Only fetch the data if id is available
-      fetch(`/pastors.json`)
-        .then((response) => response.json())
-        .then((data) => {
-          const pastorData = data.find((pastor) => pastor.id === parseInt(id));
-          if (pastorData) {
-            setPastor(pastorData);
-          }
-        })
-        .catch((error) => {
-          console.error('Error fetching pastor data:', error);
-        });
-    }
-  }, [id]); // Re-fetch if id changes
+    if (!id) return; // Safeguard to prevent unnecessary execution when `id` is undefined
+
+    // Fetch the pastor data by id (this can be an API call or from the JSON file)
+    fetch('/pastors.json')
+      .then((response) => response.json())
+      .then((data) => {
+        const pastorData = data.find((pastor) => pastor.id === parseInt(id, 10));
+        setPastor(pastorData);
+      })
+      .catch((error) => console.error('Error fetching pastor data:', error));
+  }, [id]);
 
   if (!pastor) {
     return <div>Loading...</div>;
   }
 
-  // Handle long biographies by trimming and adding a "Read More" option
-  const [isReadMore, setIsReadMore] = useState(false);
   const toggleReadMore = () => setIsReadMore(!isReadMore);
 
   return (
