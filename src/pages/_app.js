@@ -8,7 +8,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
         <title>PMS</title>
         <meta name="description" content="Welcome to Emmanuel's blog" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <Layout>
         <Component {...pageProps} />

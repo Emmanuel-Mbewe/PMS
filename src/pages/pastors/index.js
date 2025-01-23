@@ -14,7 +14,7 @@ export default function Pastors() {
   return (
     <div className="bg-gray-100 min-h-screen p-6">
       <header className="text-center mb-12 mt-11">
-        <h1 className="text-4xl font-bold text-gray-800">Welcome to the Pastors Page</h1>
+        <h1 className="text-4xl font-bold text-gray-800">Our Pastors</h1>
       </header>
 
       <main className="flex flex-col items-center">

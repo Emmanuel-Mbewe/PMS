@@ -5,6 +5,8 @@ const Home = () => {
   const [data, setData] = useState(null);
   const [pastors, setPastors] = useState([]);
   const [churches, setChurches] = useState([]);
+  const [presbyteries, setPresbyteries] = useState([]);
+  const [studentPastors, setStudentPastors] = useState([]);
   const router = useRouter();
 
   useEffect(() => {
@@ -22,9 +24,19 @@ const Home = () => {
     fetch("/churches.json")
       .then((response) => response.json())
       .then((churches) => setChurches(churches));
+
+    // Fetch the presbyteries' data
+    fetch("/presbyteries.json")
+      .then((response) => response.json())
+      .then((presbyteries) => setPresbyteries(presbyteries));
+
+    // Fetch the student pastors' data
+    fetch("/students.json")
+      .then((response) => response.json())
+      .then((studentPastors) => setStudentPastors(studentPastors));
   }, []);
 
-  if (!data || pastors.length === 0 || churches.length === 0) {
+  if (!data || pastors.length === 0 || churches.length === 0 || presbyteries.length === 0 || studentPastors.length === 0) {
     return <div>Loading...</div>; // Show loading message until data is fetched
   }
 
@@ -32,7 +44,7 @@ const Home = () => {
     router.push(pageUrl);
   };
 
-  // Update the total number of pastors and churches dynamically
+  // Update the total number of pastors, churches, presbyteries, and student pastors dynamically
   const updatedCards = data.cards.map((card) => {
     if (card.title === "Pastors") {
       const total = pastors.length > 10 ? `${pastors.length}+` : pastors.length.toString();
@@ -43,6 +55,20 @@ const Home = () => {
     }
     if (card.title === "Churches") {
       const total = churches.length > 10 ? `${churches.length}+` : churches.length.toString();
+      return {
+        ...card,
+        total,
+      };
+    }
+    if (card.title === "Presbyteries") {
+      const total = presbyteries.length > 10 ? `${presbyteries.length}+` : presbyteries.length.toString();
+      return {
+        ...card,
+        total,
+      };
+    }
+    if (card.title === "Student Pastors") {
+      const total = studentPastors.length > 10 ? `${studentPastors.length}+` : studentPastors.length.toString();
       return {
         ...card,
         total,
