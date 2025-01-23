@@ -1,18 +1,55 @@
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 const Home = () => {
   const [data, setData] = useState(null);
+  const [pastors, setPastors] = useState([]);
+  const [churches, setChurches] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     // Fetch the mock data from the JSON file
     fetch("/data.json")
       .then((response) => response.json())
       .then((data) => setData(data));
+
+    // Fetch the pastors' data
+    fetch("/pastors.json")
+      .then((response) => response.json())
+      .then((pastors) => setPastors(pastors));
+
+    // Fetch the churches' data
+    fetch("/churches.json")
+      .then((response) => response.json())
+      .then((churches) => setChurches(churches));
   }, []);
 
-  if (!data) {
+  if (!data || pastors.length === 0 || churches.length === 0) {
     return <div>Loading...</div>; // Show loading message until data is fetched
   }
+
+  const handleCardClick = (pageUrl) => {
+    router.push(pageUrl);
+  };
+
+  // Update the total number of pastors and churches dynamically
+  const updatedCards = data.cards.map((card) => {
+    if (card.title === "Pastors") {
+      const total = pastors.length > 10 ? `${pastors.length}+` : pastors.length.toString();
+      return {
+        ...card,
+        total,
+      };
+    }
+    if (card.title === "Churches") {
+      const total = churches.length > 10 ? `${churches.length}+` : churches.length.toString();
+      return {
+        ...card,
+        total,
+      };
+    }
+    return card;
+  });
 
   return (
     <div className="bg-gray-100 min-h-screen p-6">
@@ -33,8 +70,12 @@ const Home = () => {
       <main className="flex flex-col items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Dynamically render the cards */}
-          {data.cards.map((card, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg p-6 text-center">
+          {updatedCards.map((card, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-lg p-6 text-center cursor-pointer"
+              onClick={() => handleCardClick(card.pageUrl)}
+            >
               <img
                 src={card.image}
                 alt={card.title}

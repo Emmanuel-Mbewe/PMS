@@ -1,0 +1,36 @@
+[
+    {
+      "id": 1,
+      "firstName": "David",
+      "lastName": "Miller",
+      "status": "Studying",
+      "profilePic": "/images/student-pastor.png",
+      "age": 25,
+      "biography": "David Miller is a dedicated student pastor currently pursuing his Master's in Divinity. He has a passion for youth ministry and community outreach.",
+      "institution": "Theological Seminary",
+      "program": "Master's in Divinity"
+    },
+    {
+      "id": 2,
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "status": "Studying",
+      "profilePic": "/images/student-pastor.png",
+      "age": 28,
+      "biography": "Sarah Johnson is a student pastor focused on women's ministry. She is currently enrolled in a Bachelor's program in Theology.",
+      "institution": "Bible College",
+      "program": "Bachelor's in Theology"
+    },
+    {
+      "id": 3,
+      "firstName": "Michael",
+      "lastName": "Williams",
+      "status": "Studying",
+      "profilePic": "/images/student-pastor.png",
+      "age": 23,
+      "biography": "Michael Williams is enthusiastic about music ministry and is pursuing a Master's degree in Christian Music. He hopes to lead worship services in the future.",
+      "institution": "Music Seminary",
+      "program": "Master's in Christian Music"
+    }
+  ]
+  

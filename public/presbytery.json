@@ -1,0 +1,36 @@
+[
+    {
+      "id": 1,
+      "name": "Northern Presbytery",
+      "location": "North Region",
+      "status": "Active",
+      "profilePic": "/images/Presbytery.png",
+      "description": "The Northern Presbytery covers the northern region and oversees several churches and pastors. It focuses on community engagement and spiritual growth.",
+      "moderator": "Rev. Peter Parker",
+      "churches": 15,
+      "pastors": 20
+    },
+    {
+      "id": 2,
+      "name": "Central Presbytery",
+      "location": "Central Region",
+      "status": "Active",
+      "profilePic": "/images/Presbytery.png",
+      "description": "The Central Presbytery is responsible for the central region. It supports the spiritual and administrative needs of its churches and members.",
+      "moderator": "Rev. Mary Johnson",
+      "churches": 10,
+      "pastors": 15
+    },
+    {
+      "id": 3,
+      "name": "Southern Presbytery",
+      "location": "South Region",
+      "status": "Active",
+      "profilePic": "/images/Presbytery.png",
+      "description": "The Southern Presbytery serves the southern region. It focuses on pastoral care and community development initiatives.",
+      "moderator": "Rev. James Brown",
+      "churches": 8,
+      "pastors": 10
+    }
+  ]
+  
