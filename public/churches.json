@@ -1,13 +1,13 @@
 [
     {
       "id": 1,
-      "name": "City Church",
-      "location": "Downtown",
+      "name": "Nkhoma CCAP",
+      "location": "Lilongwe east, Nkhoma",
       "status": "Active",
       "profilePic": "/images/Church.png",
       "capacity": 500,
-      "description": "City Church is located in the heart of downtown and has been serving the community for over 50 years. It offers various programs and services to meet the spiritual and social needs of its members.",
-      "pastor": "Rev. John Doe",
+      "description": "Nkhoma CCAP is located to the east of Lilongwe district and has been serving the community for over 50 years. It offers various programs and services to meet the spiritual and social needs of its members.",
+      "pastor": "Rev. Emmanuel Mbewe",
       "services": [
         "Sunday Worship",
         "Bible Study",
@@ -16,13 +16,13 @@
     },
     {
       "id": 2,
-      "name": "Grace Community Church",
-      "location": "Suburbs",
+      "name": "Chilanga CCAP",
+      "location": "Kasungu",
       "status": "Active",
       "profilePic": "/images/Church.png",
       "capacity": 300,
-      "description": "Grace Community Church is known for its welcoming atmosphere and strong sense of community. It offers a range of activities including Sunday services, community outreach, and support groups.",
-      "pastor": "Rev. Jane Smith",
+      "description": "Chilanga CCAP is known for its welcoming atmosphere and strong sense of community. It offers a range of activities including Sunday services, community outreach, and support groups.",
+      "pastor": "Rev. Charles Banda",
       "services": [
         "Sunday Worship",
         "Community Outreach",
@@ -31,13 +31,13 @@
     },
     {
       "id": 3,
-      "name": "Faith Church",
-      "location": "East Side",
+      "name": "Thete CCAP",
+      "location": "Dedza",
       "status": "Active",
       "profilePic": "/images/Church.png",
       "capacity": 200,
-      "description": "Faith Church has a long-standing history in the east side of the city. It is dedicated to providing spiritual guidance and support to its congregation through various programs.",
-      "pastor": "Rev. Samuel Johnson",
+      "description": "Thete CCAP has a long-standing history in the east side of the city. It is dedicated to providing spiritual guidance and support to its congregation through various programs.",
+      "pastor": "Rev. Grey Mitomoni",
       "services": [
         "Sunday Worship",
         "Prayer Meetings",

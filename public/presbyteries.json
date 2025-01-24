@@ -1,34 +1,34 @@
 [
     {
       "id": 1,
-      "name": "Northern Presbytery",
-      "location": "North Region",
+      "name": "Lilongwe Presbytery",
+      "location": "Central Region",
       "status": "Active",
-      "profilePic": "/images/Presbytery.png",
-      "description": "The Northern Presbytery covers the northern region and oversees several churches and pastors. It focuses on community engagement and spiritual growth.",
-      "moderator": "Rev. Peter Parker",
+      "profilePic": "/images/Presbyterian.jpg",
+      "description": "The Lilongwe Presbytery covers the Lilongwe region and oversees several churches and pastors. It focuses on community engagement and spiritual growth.",
+      "moderator": "Rev. Emmanuel Mbewe",
       "churches": 15,
       "pastors": 20
     },
     {
       "id": 2,
-      "name": "Central Presbytery",
+      "name": "Kasungu Presbytery",
       "location": "Central Region",
       "status": "Active",
-      "profilePic": "/images/Presbytery.png",
-      "description": "The Central Presbytery is responsible for the central region. It supports the spiritual and administrative needs of its churches and members.",
-      "moderator": "Rev. Mary Johnson",
+      "profilePic": "/images/Presbyterian.jpg",
+      "description": "The Kasungu Presbytery is responsible for the Kasungu region. It supports the spiritual and administrative needs of its churches and members.",
+      "moderator": "Rev. Charles Banda",
       "churches": 10,
       "pastors": 15
     },
     {
       "id": 3,
-      "name": "Southern Presbytery",
-      "location": "South Region",
+      "name": "Dedza Presbytery",
+      "location": "Central Region",
       "status": "Active",
-      "profilePic": "/images/Presbytery.png",
-      "description": "The Southern Presbytery serves the southern region. It focuses on pastoral care and community development initiatives.",
-      "moderator": "Rev. James Brown",
+      "profilePic": "/images/Presbyterian.jpg",
+      "description": "The Dedza Presbytery serves the Dedza region. It focuses on pastoral care and community development initiatives.",
+      "moderator": "Rev. Grey Michael",
       "churches": 8,
       "pastors": 10
     }

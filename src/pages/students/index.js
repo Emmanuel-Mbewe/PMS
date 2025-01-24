@@ -5,7 +5,7 @@ const StudentPastors = () => {
 
   useEffect(() => {
     // Fetch the student pastors' data from the JSON file
-    fetch("/student-pastors.json")
+    fetch("/students.json")
       .then((response) => response.json())
       .then((studentPastors) => setStudentPastors(studentPastors));
   }, []);

@@ -1,35 +1,35 @@
 [
     {
       "id": 1,
-      "firstName": "David",
-      "lastName": "Miller",
+      "firstName": "Pemphero",
+      "lastName": "Chikadza",
       "status": "Studying",
-      "profilePic": "/images/student-pastor.png",
+      "profilePic": "/images/Student-pastor.jpg",
       "age": 25,
-      "biography": "David Miller is a dedicated student pastor currently pursuing his Master's in Divinity. He has a passion for youth ministry and community outreach.",
-      "institution": "Theological Seminary",
-      "program": "Master's in Divinity"
+      "biography": "Pemphero Chikadza is a dedicated student pastor currently pursuing his Bachelor's In Theology. He has a passion for youth ministry and community outreach.",
+      "institution": "Zomba Theological University",
+      "program": "Bachelor's in Theology"
     },
     {
       "id": 2,
-      "firstName": "Sarah",
-      "lastName": "Johnson",
+      "firstName": "Chikumbutso",
+      "lastName": "Phiri",
       "status": "Studying",
-      "profilePic": "/images/student-pastor.png",
+      "profilePic": "/images/Student-pastor.jpg",
       "age": 28,
-      "biography": "Sarah Johnson is a student pastor focused on women's ministry. She is currently enrolled in a Bachelor's program in Theology.",
+      "biography": "Chikumbutso Phiri is a student pastor focused on youth ministry. He is currently enrolled in a Bachelor's program in Theology.",
       "institution": "Bible College",
       "program": "Bachelor's in Theology"
     },
     {
       "id": 3,
-      "firstName": "Michael",
-      "lastName": "Williams",
+      "firstName": "Jelomy",
+      "lastName": "Bwanali",
       "status": "Studying",
-      "profilePic": "/images/student-pastor.png",
+      "profilePic": "/images/Student-pastor.jpg",
       "age": 23,
-      "biography": "Michael Williams is enthusiastic about music ministry and is pursuing a Master's degree in Christian Music. He hopes to lead worship services in the future.",
-      "institution": "Music Seminary",
+      "biography": "Jelomy Bwanali is enthusiastic about music ministry and is pursuing a Master's degree in Christian Music. He hopes to lead worship services in the future.",
+      "institution": "JMTI",
       "program": "Master's in Christian Music"
     }
   ]
